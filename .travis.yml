@@ -25,13 +25,13 @@ script:
   - if [[ "${STYLE}" = "true" ]]; then ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT; fi;
 
 rvm:
-  - 2.4.1
+  - 2.4.2
   - 2.3.2
   - jruby-9.1.8.0
 matrix:
   fast_finish: true
   include:
-    - rvm: 2.4.1
+    - rvm: 2.4.2
       gemfile: gemfiles/sidekiq_develop.gemfile
       env: STYLE=true
 gemfile:
